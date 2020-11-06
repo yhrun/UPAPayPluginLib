@@ -4,7 +4,7 @@
 //
 //  Created by wxzhao on 12-10-10.
 //  Copyright (c) 2012年 China UnionPay. All rights reserved.
-//  v4.2.3
+//  v4.2.4
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
