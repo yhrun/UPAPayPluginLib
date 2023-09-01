@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "UPAPayPluginLib"
-  s.version      = "1.0.1"
+  s.version      = "1.7.0"
   s.summary      = "UPAPayPluginLib"
 
   # This description is used to generate tags and improve search results.
@@ -46,6 +46,6 @@ Pod::Spec.new do |s|
 
   s.frameworks = "Foundation", "UIKit", "CFNetwork", "SystemConfiguration"
   s.libraries = "z", "stdc++"
-  s.vendored_libraries = "lib/libUPAPayPlugin.a"
+  s.vendored_libraries = "libs/libUPAPayPlugin.a"
 
 end
