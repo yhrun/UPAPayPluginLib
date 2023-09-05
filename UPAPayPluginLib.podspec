@@ -44,8 +44,15 @@ Pod::Spec.new do |s|
   s.source_files  =  "inc/**/*.{h,m}"
 
 
-  s.frameworks = "Foundation", "UIKit", "CFNetwork", "SystemConfiguration"
+  s.frameworks = "Foundation", "UIKit", "CFNetwork", "SystemConfiguration", "PassKit"
   s.libraries = "z", "stdc++"
   s.vendored_libraries = "libs/libUPAPayPlugin.a"
+
+  # 避免m1电脑pod trunk push的时候报错
+  # https://github.com/CocoaPods/CocoaPods/issues/10065
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 end
